@@ -20,33 +20,28 @@ a:hover {
 .App {
   display: flex;
   overflow: hidden;
-  /* position: relative; */
 }
+
 .navbar {
-  /* position: fixed; */
-  flex: 0.15;
-  height: 100vh;
+  flex: 0.12;
   background-color: rgb(0, 21, 41);
 }
-.navbar-container {
-  width: 100%;
-  height: 100vh;
-}
+
 .main {
-  flex: 0.85;
+  flex: 0.88;
   width: 100%;
 }
 .routes {
   padding: 20px;
 }
-/* .nav-container {
+.nav-container {
   position: fixed;
   left: 0;
   margin: 10px;
   height: 100vh;
   margin: 0px;
   background-color: rgb(0, 21, 41);
-} */
+}
 
 .logo-container {
   background-color: #001529;
@@ -98,19 +93,24 @@ a:hover {
 
 @media screen and (max-width: 800px) {
   .app {
+    display: flex;
     flex-direction: column;
     overflow: hidden;
   }
-
+  .footer {
+    width: 100vw;
+  }
   .navbar {
-    flex: 1;
+    flex: 0;
+    /* display: none; */
   }
 
   .main {
     flex: 1;
+    width: 100vw;
     margin-top: 90px;
     margin-left: 0px;
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
   .nav-container {
@@ -178,11 +178,14 @@ a:hover {
 }
 
 .coin-details-heading {
+  margin: 0 !important;
   font-weight: 700 !important;
   margin-top: 20px !important;
   color: var(--pink) !important;
 }
-
+.coin-details-answer {
+  margin: 5px 0px !important;
+}
 .coin-stats {
   display: flex;
   justify-content: space-between;
@@ -239,6 +242,7 @@ a:hover {
 .coin-links {
   padding: 0px 20px;
   flex: 0.5;
+  margin: 20px 0px;
 }
 
 .coin-link {
@@ -295,7 +299,10 @@ a:hover {
   width: 180px;
 }
 .news-card {
-  min-height: 300px !important;
+  max-height: 400px !important;
+  min-height: 300px;
+  min-width: "600px";
+  /* height: "200px"; */
 }
 .news-image-container {
   display: flex !important;
@@ -372,11 +379,23 @@ a:hover {
   width: 200px !important;
   margin-top: 20px !important;
 }
-
 .footer {
   background-color: #001529;
   display: flex;
   flex-direction: column;
   padding: 20px;
   align-items: center;
+}
+.exchange-header-container {
+  padding: 10px;
+  margin: 2px 10px;
+}
+.exchange-container {
+  margin: 0px 20px;
+  border: 1px solid black;
+}
+.exchange {
+  padding: 10px;
+  margin: 10px 10px;
+  border-bottom: 1px solid #000;
 }
